@@ -49,8 +49,11 @@ In this case, we are just assigning some data, both numbers and text, of various
 
 ```{r}
 x <- 5
+x
 y <- "Rstats"
+y
 z <- c("rstats", "perl", "bash", "python")
+z
 ```
 
 
