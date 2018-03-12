@@ -32,5 +32,10 @@ y <- "Rstats"
 z <- c("rstats", "perl", "bash", "python")
 ```
 
-# loading a file into R
+# loading a built-in dataset that comes with R 
 
+```{r}
+cardata <- cars
+```
+
+#loading our own dataset into R
