@@ -3,7 +3,7 @@ title: "R Notebook"
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook for the Introducton to R and R Studio 50 minute session. Slides and othr course materials are located [on github](z.umn.edu/rtutorial). 
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook for the Introducton to R and R Studio 50 minute session. Slides and othr course materials are located [on github](http://z.umn.edu/rtutorial). 
 
 RNotebook is a format that lets you run code and display the results in a format that can be interactively run and shared as an html file. 
 
