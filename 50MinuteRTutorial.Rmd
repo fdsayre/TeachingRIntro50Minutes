@@ -24,7 +24,23 @@ The preview shows you a rendered HTML copy of the contents of the editor. Conseq
 setwd("~/projects/TeachingRIntro50Minutes")
 ```
 
-# Get data into R
+
+# Install any libraries you will need
+# This only needs to be done once
+
+```{r}
+install.packages("ggplot2")
+```
+
+
+# Load Libraries
+
+```{r}
+library(ggplot2)
+```
+
+
+# Load some data into R
 
 ```{r}
 x <- 5
@@ -32,10 +48,24 @@ y <- "Rstats"
 z <- c("rstats", "perl", "bash", "python")
 ```
 
-# loading a built-in dataset that comes with R 
+# ACTIVITY: Load some data into R
+
+
+# Loading a built-in dataset that comes with R 
 
 ```{r}
 cardata <- cars
 ```
 
-#loading our own dataset into R
+# Loading our own dataset (.csv files) into R
+
+
+# Get to know your data
+
+# Basic summary statistics
+
+# Plot our data
+
+
+# Export a dataset to a CSV file
+

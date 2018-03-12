@@ -198,26 +198,73 @@ $(document).ready(function () {
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="get-data-into-r" class="section level1">
-<h1>Get data into R</h1>
+<div id="install-any-libraries-you-will-need" class="section level1">
+<h1>Install any libraries you will need</h1>
+</div>
+<div id="this-only-needs-to-be-done-once" class="section level1">
+<h1>This only needs to be done once</h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcImdncGxvdDJcIilcblxuYGBgIn0= -->
+<pre class="r"><code>install.packages(&quot;ggplot2&quot;)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoidHJ5aW5nIFVSTCAnaHR0cHM6Ly9jcmFuLmNuci5CZXJrZWxleS5lZHUvYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy40L2dncGxvdDJfMi4yLjEudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCAyNzkyNDE0IGJ5dGVzICgyLjcgTUIpXG49PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuZG93bmxvYWRlZCAyLjcgTUJcbiJ9 -->
+<pre><code>trying URL 'https://cran.cnr.Berkeley.edu/bin/macosx/el-capitan/contrib/3.4/ggplot2_2.2.1.tgz'
+Content type 'application/x-gzip' length 2792414 bytes (2.7 MB)
+==================================================
+downloaded 2.7 MB</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5UaGUgZG93bmxvYWRlZCBiaW5hcnkgcGFja2FnZXMgYXJlIGluXG5cdC92YXIvZm9sZGVycy83Mi9oeWQ1MDZsNTU1MWM4OWxycWNzdmNra20wMDAwZ3AvVC8vUnRtcFNBTUlPRy9kb3dubG9hZGVkX3BhY2thZ2VzXG4ifQ== -->
+<pre><code>
+The downloaded binary packages are in
+    /var/folders/72/hyd506l5551c89lrqcsvckkm0000gp/T//RtmpSAMIOG/downloaded_packages</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="load-libraries" class="section level1">
+<h1>Load Libraries</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+</div>
+<div id="load-some-data-into-r" class="section level1">
+<h1>Load some data into R</h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="activity-load-some-data-into-r" class="section level1">
+<h1>ACTIVITY: Load some data into R</h1>
 </div>
 <div id="loading-a-built-in-dataset-that-comes-with-r" class="section level1">
-<h1>loading a built-in dataset that comes with R</h1>
+<h1>Loading a built-in dataset that comes with R</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
-<div id="loading-our-own-dataset-into-r" class="section level1">
-<h1>loading our own dataset into R</h1>
+<div id="loading-our-own-dataset-.csv-files-into-r" class="section level1">
+<h1>Loading our own dataset (.csv files) into R</h1>
+</div>
+<div id="get-to-know-your-data" class="section level1">
+<h1>Get to know your data</h1>
+</div>
+<div id="basic-summary-statistics" class="section level1">
+<h1>Basic summary statistics</h1>
+</div>
+<div id="plot-our-data" class="section level1">
+<h1>Plot our data</h1>
+</div>
+<div id="export-a-dataset-to-a-csv-file" class="section level1">
+<h1>Export a dataset to a CSV file</h1>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKVGhpcyBpcyBhbiBbUiBNYXJrZG93bl0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbSkgTm90ZWJvb2suIFdoZW4geW91IGV4ZWN1dGUgY29kZSB3aXRoaW4gdGhlIG5vdGVib29rLCB0aGUgcmVzdWx0cyBhcHBlYXIgYmVuZWF0aCB0aGUgY29kZS4gCgpUcnkgZXhlY3V0aW5nIHRoaXMgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpSdW4qIGJ1dHRvbiB3aXRoaW4gdGhlIGNodW5rIG9yIGJ5IHBsYWNpbmcgeW91ciBjdXJzb3IgaW5zaWRlIGl0IGFuZCBwcmVzc2luZyAqQ21kK1NoaWZ0K0VudGVyKi4gCgpgYGB7cn0KcGxvdChjYXJzKQpgYGAKCkFkZCBhIG5ldyBjaHVuayBieSBjbGlja2luZyB0aGUgKkluc2VydCBDaHVuayogYnV0dG9uIG9uIHRoZSB0b29sYmFyIG9yIGJ5IHByZXNzaW5nICpDbWQrT3B0aW9uK0kqLgoKV2hlbiB5b3Ugc2F2ZSB0aGUgbm90ZWJvb2ssIGFuIEhUTUwgZmlsZSBjb250YWluaW5nIHRoZSBjb2RlIGFuZCBvdXRwdXQgd2lsbCBiZSBzYXZlZCBhbG9uZ3NpZGUgaXQgKGNsaWNrIHRoZSAqUHJldmlldyogYnV0dG9uIG9yIHByZXNzICpDbWQrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4gCgpUaGUgcHJldmlldyBzaG93cyB5b3UgYSByZW5kZXJlZCBIVE1MIGNvcHkgb2YgdGhlIGNvbnRlbnRzIG9mIHRoZSBlZGl0b3IuIENvbnNlcXVlbnRseSwgdW5saWtlICpLbml0KiwgKlByZXZpZXcqIGRvZXMgbm90IHJ1biBhbnkgUiBjb2RlIGNodW5rcy4gSW5zdGVhZCwgdGhlIG91dHB1dCBvZiB0aGUgY2h1bmsgd2hlbiBpdCB3YXMgbGFzdCBydW4gaW4gdGhlIGVkaXRvciBpcyBkaXNwbGF5ZWQuCgoKIyBTZXQgd29ya2luZyBkaXJlY3RvcnkKIyBUaGlzIGNhbiBhbHNvIGJlIGRvbmUgdXNpbmcgU2Vzc2lvbiAtLT4gU2V0IFdvcmtpbmcgRGlyZWN0b3J5CmBgYHtyfQpzZXR3ZCgifi9wcm9qZWN0cy9UZWFjaGluZ1JJbnRybzUwTWludXRlcyIpCmBgYAoKIyBHZXQgZGF0YSBpbnRvIFIKCmBgYHtyfQp4IDwtIDUKeSA8LSAiUnN0YXRzIgp6IDwtIGMoInJzdGF0cyIsICJwZXJsIiwgImJhc2giLCAicHl0aG9uIikKYGBgCgojIGxvYWRpbmcgYSBidWlsdC1pbiBkYXRhc2V0IHRoYXQgY29tZXMgd2l0aCBSIAoKYGBge3J9CmNhcmRhdGEgPC0gY2FycwpgYGAKCiNsb2FkaW5nIG91ciBvd24gZGF0YXNldCBpbnRvIFI=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKVGhpcyBpcyBhbiBbUiBNYXJrZG93bl0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbSkgTm90ZWJvb2suIFdoZW4geW91IGV4ZWN1dGUgY29kZSB3aXRoaW4gdGhlIG5vdGVib29rLCB0aGUgcmVzdWx0cyBhcHBlYXIgYmVuZWF0aCB0aGUgY29kZS4gCgpUcnkgZXhlY3V0aW5nIHRoaXMgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpSdW4qIGJ1dHRvbiB3aXRoaW4gdGhlIGNodW5rIG9yIGJ5IHBsYWNpbmcgeW91ciBjdXJzb3IgaW5zaWRlIGl0IGFuZCBwcmVzc2luZyAqQ21kK1NoaWZ0K0VudGVyKi4gCgpgYGB7cn0KcGxvdChjYXJzKQpgYGAKCkFkZCBhIG5ldyBjaHVuayBieSBjbGlja2luZyB0aGUgKkluc2VydCBDaHVuayogYnV0dG9uIG9uIHRoZSB0b29sYmFyIG9yIGJ5IHByZXNzaW5nICpDbWQrT3B0aW9uK0kqLgoKV2hlbiB5b3Ugc2F2ZSB0aGUgbm90ZWJvb2ssIGFuIEhUTUwgZmlsZSBjb250YWluaW5nIHRoZSBjb2RlIGFuZCBvdXRwdXQgd2lsbCBiZSBzYXZlZCBhbG9uZ3NpZGUgaXQgKGNsaWNrIHRoZSAqUHJldmlldyogYnV0dG9uIG9yIHByZXNzICpDbWQrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4gCgpUaGUgcHJldmlldyBzaG93cyB5b3UgYSByZW5kZXJlZCBIVE1MIGNvcHkgb2YgdGhlIGNvbnRlbnRzIG9mIHRoZSBlZGl0b3IuIENvbnNlcXVlbnRseSwgdW5saWtlICpLbml0KiwgKlByZXZpZXcqIGRvZXMgbm90IHJ1biBhbnkgUiBjb2RlIGNodW5rcy4gSW5zdGVhZCwgdGhlIG91dHB1dCBvZiB0aGUgY2h1bmsgd2hlbiBpdCB3YXMgbGFzdCBydW4gaW4gdGhlIGVkaXRvciBpcyBkaXNwbGF5ZWQuCgoKIyBTZXQgd29ya2luZyBkaXJlY3RvcnkKIyBUaGlzIGNhbiBhbHNvIGJlIGRvbmUgdXNpbmcgU2Vzc2lvbiAtLT4gU2V0IFdvcmtpbmcgRGlyZWN0b3J5CmBgYHtyfQpzZXR3ZCgifi9wcm9qZWN0cy9UZWFjaGluZ1JJbnRybzUwTWludXRlcyIpCmBgYAoKCiMgSW5zdGFsbCBhbnkgbGlicmFyaWVzIHlvdSB3aWxsIG5lZWQKIyBUaGlzIG9ubHkgbmVlZHMgdG8gYmUgZG9uZSBvbmNlCgpgYGB7cn0KaW5zdGFsbC5wYWNrYWdlcygiZ2dwbG90MiIpCmBgYAoKCiMgTG9hZCBMaWJyYXJpZXMKCmBgYHtyfQpsaWJyYXJ5KGdncGxvdDIpCmBgYAoKCiMgTG9hZCBzb21lIGRhdGEgaW50byBSCgpgYGB7cn0KeCA8LSA1CnkgPC0gIlJzdGF0cyIKeiA8LSBjKCJyc3RhdHMiLCAicGVybCIsICJiYXNoIiwgInB5dGhvbiIpCmBgYAoKIyBBQ1RJVklUWTogTG9hZCBzb21lIGRhdGEgaW50byBSCgoKIyBMb2FkaW5nIGEgYnVpbHQtaW4gZGF0YXNldCB0aGF0IGNvbWVzIHdpdGggUiAKCmBgYHtyfQpjYXJkYXRhIDwtIGNhcnMKYGBgCgojIExvYWRpbmcgb3VyIG93biBkYXRhc2V0ICguY3N2IGZpbGVzKSBpbnRvIFIKCgojIEdldCB0byBrbm93IHlvdXIgZGF0YQoKIyBCYXNpYyBzdW1tYXJ5IHN0YXRpc3RpY3MKCiMgUGxvdCBvdXIgZGF0YQoKCiMgRXhwb3J0IGEgZGF0YXNldCB0byBhIENTViBmaWxlCgo=</div>
 
 
 
