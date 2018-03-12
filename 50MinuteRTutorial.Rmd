@@ -106,8 +106,17 @@ We can use the built in plotting libraries that comes with base R to plot our da
 
 ```{r}
 plot(data$water_use)
+```
+
+```{r}
 boxplot(data$energy_star_score)
+```
+
+```{r}
 boxplot(data$energy_star_score ~ data$org_name)
+```
+
+```{r}
 hist(data$energy_star_score)
 ```
 
