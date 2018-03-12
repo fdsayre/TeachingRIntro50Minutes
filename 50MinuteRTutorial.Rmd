@@ -82,7 +82,7 @@ summary(data$energy_star_score)
 # Plot our data
 
 ```{r}
-
+plot(data$water_use)
 ```
 
 
