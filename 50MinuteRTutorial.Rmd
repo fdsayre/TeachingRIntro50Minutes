@@ -5,6 +5,17 @@ output: html_notebook
 
 This is a [R Notebook](http://rmarkdown.rstudio.com)for the "Introducton to R and R Studio" 50 minute session that is located [here](http://z.umn.edu/rtutorial). 
 
+## Lesson Objectives
+- Introduce R and R Studio
+- Show some of the power of R
+  - Getting Data In
+  - Exploring Data
+  - Visualizing Data
+  
+## Outside Scope
+
+## Why use an RNotebook?
+
 R Notebooks let you run R code and display the results interactively while also sharing the results as an html file that anyone can read. We will be using this R Notebook to display code and examples. All the commands seen in the following snippits can be run in Rstudio, the R console, or in a .R file
 
 For example the following displays a simple scatterplot for the data in the built-in dataset "cars" (which contains data about cars!) for the variable "mpg" 
@@ -13,7 +24,6 @@ For example the following displays a simple scatterplot for the data in the buil
 plot(mtcars$mpg)
 ```
 
-# R vs. RStudio
 
 # What Happens in R Stays In R (Until You Get It Out)
 
@@ -80,10 +90,19 @@ data <- read.csv("mpls_energy_benchmarking_2015.csv", header=TRUE, na.strings=c(
 
 ```
 
+You can also download data directly from R, in this case from figshare: 
+
+```{r}
+download.file("https://ndownloader.figshare.com/files/2292169", "portal_data_joined.csv")
+```
+
+
+
 # Get to know your data
 Lets do some basic exploration of our data
 
 ```{r}
+head(data)
 names(data)
 str(data)
 nrow(data)
@@ -92,7 +111,7 @@ head(data)
 tail(data)
 ```
 
-# Getting help inside R
+# Getting help inside R for any of the above commands
 
 ```{r}
 ?names
@@ -108,6 +127,7 @@ summary(data$energy_star_score)
 
 
 # Plot our data
+
 We can use the built in plotting libraries that comes with base R to plot our data in various ways. 
 
 ```{r}
