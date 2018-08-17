@@ -20,6 +20,14 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<style>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
 	</head>
 	<body>
 		<div class="reveal">
@@ -101,19 +109,19 @@
 
 
 
-<section>
-  <div style="text-align: left; float: left;">
-    <p data-markdown>- This is my first left element</p>
-    <p data-markdown>- This is my second left element</p>
-    <!-- more Elements -->
-  </div>
 
-  <div style="text-align: right; float: right;">
-    <p data-markdown>- This is my first right element</p>
-    <p data-markdown>- This is my second rightelement</p>
-    <!-- more Elements -->
-  </div>
-</section>
+
+<div class="container">
+
+<div class="col">
+Column 1 Content
+</div>
+
+<div class="col">
+Column 2 Content
+</div>
+
+</div>
 
 
 <section data-markdown>
