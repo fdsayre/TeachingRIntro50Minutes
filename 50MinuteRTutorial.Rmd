@@ -13,6 +13,10 @@ For example the following displays a simple scatterplot for the data in the buil
 plot(mtcars$mpg)
 ```
 
+# R vs. RStudio
+
+# What Happens in R Stays In R (Until You Get It Out)
+
 # Set up a new project in R
 
 Using "File --> New Project" set up a new project in a new directory on your computer. This is where we will save our files and work (remember where this is so we can move data to it later). 
