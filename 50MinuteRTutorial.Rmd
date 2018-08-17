@@ -61,7 +61,7 @@ library(ggplot2)
 In this case, we are just going to assign some data, both numbers and text, to a couple different names       . R has a lot of different data structures and types that you will learn as you explore R and as you need to do different things with R.
 
 ```{r}
-x1 <- 5
+x <- 5
 x
 y <- "Rstats"
 y
@@ -76,8 +76,6 @@ R comes with a number or built-in datasets that you can explore.
 
 ```{r}
 mtcars
-library(gapminder)
-gapminder
 cardata <- mtcars
 cardata
 ```
@@ -99,22 +97,29 @@ download.file("https://ndownloader.figshare.com/files/2292169", "portal_data_joi
 
 
 # Get to know your data
-Lets do some basic exploration of our data
 
+## Look at the first couple rows of your data
 ```{r}
 head(data)
-names(data)
+```
+
+## See the structure of your data
+```{r}
 str(data)
+```
+
+
+## See the number of rows and columns in your data
+```{r}
 nrow(data)
 ncol(data)
-head(data)
-tail(data)
 ```
+
 
 # Getting help inside R for any of the above commands
 
 ```{r}
-?names
+?str
 ?read.csv
 ```
 
