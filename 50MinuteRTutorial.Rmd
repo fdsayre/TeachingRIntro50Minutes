@@ -3,24 +3,23 @@ title: "R Notebook"
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook for the Introducton to R and R Studio 50 minute session. Slides and othr course materials are located [on github](http://z.umn.edu/rtutorial). 
+This is a [R Notebook](http://rmarkdown.rstudio.com)for the "Introducton to R and R Studio" 50 minute session that is located [here](http://z.umn.edu/rtutorial). 
 
-RNotebook is a format that lets you run code and display the results in a format that can be interactively run and shared as an html file. 
+R Notebooks let you run R code and display the results interactively while also sharing the results as an html file that anyone can read. We will be using this R Notebook to display code and examples. All the commands seen in the following snippits can be run in Rstudio, the R console, or in a .R file
 
-For example the following displays a simple scatterplot for the data in the built-in dataset "cars". 
-
-We will be using RNotebook to display code and examples. All the commands seen in these snippits can be run in the CONSOLE or in a .R file
+For example the following displays a simple scatterplot for the data in the built-in dataset "cars" (which contains data about cars!) for the variable "mpg" 
 
 ```{r}
 plot(mtcars$mpg)
 ```
 
 # Set up a new project in R
-Using "File --> New Project" set up a new project in a new directory. This is where we will save our files and work. 
+
+Using "File --> New Project" set up a new project in a new directory on your computer. This is where we will save our files and work (remember where this is so we can move data to it later). 
 
 # Set your working directory to the directory you just created. 
 
-This can be done with the following code, or by using the toolbar with "Session --> Set Working Directory"
+This can be done with the following code, or by using the RStudio toolbar with "Session --> Set Working Directory". This is somewhat easier if you don't know your directory structure.
 
 ```{r}
 setwd("~/projects/TeachingRIntro50Minutes")
@@ -29,26 +28,26 @@ setwd("~/projects/TeachingRIntro50Minutes")
 
 # Install any libraries you will need
 
-This only needs to be done once for each package
+This only needs to be done once for each package for each install of R. This can take a lot of time if the package is large or has a lot of dependencies. In this case, let's start by installing the ggplot2 package. 
 
 ```{r}
 install.packages("ggplot2")
 ```
 
 
-
 # Load Libraries into memory. 
-This needs to be done each time you load R/RStudio
+This needs to be done each for each R session. 
 
 ```{r}
 library(ggplot2)
 ```
 
 # Load some data into R
-In this case, we are just assigning some data, both numbers and text, of various types. R has a lot of different data structures and types that you will learn as you explore R and as you need to do different things with R.
+
+In this case, we are just going to assign some data, both numbers and text, to a couple different names       . R has a lot of different data structures and types that you will learn as you explore R and as you need to do different things with R.
 
 ```{r}
-x <- 5
+x1 <- 5
 x
 y <- "Rstats"
 y
@@ -63,6 +62,8 @@ R comes with a number or built-in datasets that you can explore.
 
 ```{r}
 mtcars
+library(gapminder)
+gapminder
 cardata <- mtcars
 cardata
 ```
@@ -72,6 +73,7 @@ the read.csv function will load a csv file into RStudio. It has a number of opti
 
 ```{r}
 data <- read.csv("mpls_energy_benchmarking_2015.csv", header=TRUE, na.strings=c("N/A", "Not Available", "NA", "0"))
+
 ```
 
 # Get to know your data
@@ -105,7 +107,7 @@ summary(data$energy_star_score)
 We can use the built in plotting libraries that comes with base R to plot our data in various ways. 
 
 ```{r}
-plot(data$water_use)
+plot(data$floor_area)
 ```
 
 ```{r}
