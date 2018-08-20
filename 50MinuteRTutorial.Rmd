@@ -22,12 +22,8 @@ For example the following displays a simple scatterplot for the data in the buil
 plot(mtcars$mpg)
 ```
 
-# Notes before we get started
-- What Happens in R Stays In R (Until You Get It Out)
-- Put every project in it's own directory
-- Using RStudio "Projects" is a convient way to keep things together
 
----
+***
 
 # Initial setup
 
@@ -59,13 +55,14 @@ install.packages("ggplot2")
 
 
 ## Load Libraries into memory. 
+
 This needs to be done each for each R session. 
 
 ```{r}
 library(ggplot2)
 ```
 
----
+***
 
 # Getting data into R
 
@@ -111,7 +108,7 @@ You can also download data directly from R, in this case from figshare:
 download.file("https://ndownloader.figshare.com/files/2292169", "portal_data_joined.csv")
 ```
 
----
+***
 
 # Exploring your data
 
@@ -142,7 +139,7 @@ ncol(data)
 ?read.csv
 ```
 
----
+***
 
 # Basic summary statistics
 
@@ -150,7 +147,8 @@ ncol(data)
 summary(data$energy_star_score)
 ```
 
----
+
+***
 
 # Plotting your data
 
@@ -172,11 +170,11 @@ boxplot(data$energy_star_score ~ data$org_name)
 hist(data$energy_star_score)
 ```
 
----
+***
 
 # Getting data out of R
 
-# Export a dataset to a CSV file
+## Export a dataset to a CSV file
 
 ```{r}
 write.csv(data, "data.csv")
