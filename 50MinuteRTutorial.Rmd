@@ -9,6 +9,7 @@ This is a [R Notebook](http://rmarkdown.rstudio.com) for the "Introducton to R a
 		- Getting data into R as a CSV file
 		- Exploring your data
 		- Getting summary statistics
+		- Plotting Your Data
 		- Get data out of R as a CSV file
   
 ## Aside: Why use an RNotebook?
@@ -25,6 +26,8 @@ plot(mtcars$mpg)
 - What Happens in R Stays In R (Until You Get It Out)
 - Put every project in it's own directory
 - Using RStudio "Projects" is a convient way to keep things together
+
+---
 
 # Initial setup
 
@@ -61,6 +64,8 @@ This needs to be done each for each R session.
 ```{r}
 library(ggplot2)
 ```
+
+---
 
 # Getting data into R
 
@@ -106,9 +111,9 @@ You can also download data directly from R, in this case from figshare:
 download.file("https://ndownloader.figshare.com/files/2292169", "portal_data_joined.csv")
 ```
 
+---
 
-
-# Get to know your data
+# Exploring your data
 
 ## Look at the first couple rows of your data
 ```{r}
@@ -116,25 +121,28 @@ head(data)
 ```
 
 ## See the structure of your data
+
 ```{r}
 str(data)
 ```
 
 
 ## See the number of rows and columns in your data
+
 ```{r}
 nrow(data)
 ncol(data)
 ```
 
 
-# Getting help inside R for any of the above commands
+## Getting help inside R for any of the above commands
 
 ```{r}
 ?str
 ?read.csv
 ```
 
+---
 
 # Basic summary statistics
 
@@ -142,8 +150,9 @@ ncol(data)
 summary(data$energy_star_score)
 ```
 
+---
 
-# Plot our data
+# Plotting your data
 
 We can use the built in plotting libraries that comes with base R to plot our data in various ways. 
 
@@ -162,6 +171,10 @@ boxplot(data$energy_star_score ~ data$org_name)
 ```{r}
 hist(data$energy_star_score)
 ```
+
+---
+
+# Getting data out of R
 
 # Export a dataset to a CSV file
 
