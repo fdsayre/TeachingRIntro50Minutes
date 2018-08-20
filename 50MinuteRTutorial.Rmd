@@ -5,18 +5,20 @@ output: html_notebook
 
 This is a [R Notebook](http://rmarkdown.rstudio.com) for the "Introducton to R and R Studio" UMN Data Management Bootcamp workshop. Slides and data can be found [here](http://z.umn.edu/rtutorial). 
 
-## Lesson Objectives for this file
+# Objectives
+		- Setting up a new project
 		- Getting data into R as a CSV file
-		- Exploring your data
-		- Getting summary statistics
+		- Exploring your data & getting summary statistics
 		- Plotting Your Data
 		- Get data out of R as a CSV file
-  
-## Aside: Why use an RNotebook?
 
-R Notebooks let you run R code and display the results interactively while also sharing the results as an html file that anyone can read. We will be using this R Notebook to display code and examples. All the commands seen in the following snippits can be run in Rstudio, the R console, or in a .R file
+***
 
-For example the following displays a simple scatterplot for the data in the built-in dataset "cars" (which contains data about cars!) for the variable "mpg" 
+# Aside: What is an RNotebook (i.e. "What Am I Looking At?)
+
+RNotebooks let you run R code and display the results while also sharing the results as an html file. We will be using this R Notebook to display code and examples. All the commands seen in the following snippits can be run in an R Script, the R console, or in a .R file
+
+For example the following displays a simple scatterplot for the data in the built-in dataset "cars" (which contains data about cars!) for the variable "mpg". This runs just as it would in a R Script but it also generates a .html file with the output. The file for this R Notebook is located [here](https://fdsayre.github.io/TeachingRIntro50Minutes/50MinuteRTutorial.nb.html)
 
 ```{r}
 plot(mtcars$mpg)
@@ -25,9 +27,7 @@ plot(mtcars$mpg)
 
 ***
 
-# Initial setup
-
-## Set up a new project
+# Seting up a new project
 
 Using "File --> New Project" set up a new project in a new directory on your computer. This is where we will save our work (remember where this is so we can move data to it later). 
 
@@ -35,19 +35,21 @@ Using "File --> New Project" set up a new project in a new directory on your com
 
 Open a new R Script file (File --> New File --> R Script) and save it in your working directory with a .R extention
 
-## Set your working directory to the directory you just created. 
+## Set your working directory
+
 This lets R know where it should look for and save files
 
-This can be done by using the RStudio toolbar  (Session --> Set Working Directory). Copy and paste the line that appears in your console to your script so it's easy to run next time
+This can be done by (Session --> Set Working Directory). 
+
+Then copy and paste the line that appears in your console to your script so it's easy to run next time
 
 ```{r}
 setwd("~/projects/TeachingRIntro50Minutes")
 ```
 
-
 ## Install any libraries you will need
 
-This only needs to be done once for each package for each install of R. This can take a lot of time if the package is large or has a lot of dependencies. In this case, let's start by installing the ggplot2 package. 
+This only needs to be done once for each install of R. This can take a lot of time if the package is large or has a lot of dependencies. In this case, let's start by installing the ggplot2 package. 
 
 ```{r}
 install.packages("ggplot2")
@@ -62,6 +64,15 @@ This needs to be done each for each R session.
 library(ggplot2)
 ```
 
+
+## ASIDE: Getting help inside R for any of the above commands
+
+```{r}
+?str
+?read.csv
+```
+
+
 ***
 
 # Getting data into R
@@ -70,7 +81,7 @@ There a number of different ways to get data into R.
 
 ## Manually assigning variables
 
-First, let's just assign some data, both numbers and text, to a couple different variables. 
+First, let's assign some data, both numbers and text, to a couple different variable names. 
 
 ASIDE: R has a lot of different data structures and types that you will learn as you explore R and as you need to do different things with R.
 
@@ -85,7 +96,7 @@ z
 
 
 ## Built-in dataset that comes with R 
-R comes with a number or built-in datasets that are good for eploring R and R Studio. We can load them directly and also assign them to variable names.
+R comes with a number or built-in datasets that are good for eploring R and R Studio. We can load them directly but we can also assign them to variable names.
 
 
 ```{r}
@@ -113,6 +124,7 @@ download.file("https://ndownloader.figshare.com/files/2292169", "portal_data_joi
 # Exploring your data
 
 ## Look at the first couple rows of your data
+
 ```{r}
 head(data)
 ```
@@ -131,17 +143,7 @@ nrow(data)
 ncol(data)
 ```
 
-
-## Getting help inside R for any of the above commands
-
-```{r}
-?str
-?read.csv
-```
-
-***
-
-# Basic summary statistics
+## Basic summary statistics
 
 ```{r}
 summary(data$energy_star_score)
@@ -152,10 +154,15 @@ summary(data$energy_star_score)
 
 # Plotting your data
 
-We can use the built in plotting libraries that comes with base R to plot our data in various ways. 
+We can use the built-in plotting library that comes with base R to plot our data in various ways: 
 
 ```{r}
-plot(data$floor_area)
+plot(data$energy_star_score)
+```
+
+
+```{r}
+hist(data$energy_star_score)
 ```
 
 ```{r}
@@ -166,9 +173,34 @@ boxplot(data$energy_star_score)
 boxplot(data$energy_star_score ~ data$org_name)
 ```
 
+Where missing some labels! Lets try this again! (where did I find this information? I googled it: https://www.statmethods.net/advgraphs/parameters.html)
+
 ```{r}
-hist(data$energy_star_score)
+boxplot(data$energy_star_score ~ data$org_name, las=2, cex.axis=.5)
 ```
+
+## GGPlot
+
+Let's look at the Tidyverse GGPLOT package using the mtcars built-in dataset we assigned to the variable "cardata" earlier
+
+- [GGPlot](https://ggplot2.tidyverse.org/reference/ggplot.html)
+- [GGPlot Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+
+```{r}
+
+ggplot(cardata, aes(y=mpg,x=hp)) +
+  geom_point()
+
+```
+
+```{r}
+
+ggplot(cardata, aes(y=mpg,x=cyl)) +
+  geom_bar(stat="identity")
+
+```
+
+What else should we do?
 
 ***
 
