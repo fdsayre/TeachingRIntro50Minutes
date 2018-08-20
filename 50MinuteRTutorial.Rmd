@@ -5,16 +5,13 @@ output: html_notebook
 
 This is a [R Notebook](http://rmarkdown.rstudio.com) for the "Introducton to R and R Studio" UMN Data Management Bootcamp workshop. Slides and data can be found [here](http://z.umn.edu/rtutorial). 
 
-## Lesson Objectives
-- Introduce R and R Studio
-- Show some of the power of R
-  - Getting Data In
-  - Exploring Data
-  - Visualizing Data
+## Lesson Objectives for this file
+		- Getting data into R as a CSV file
+		- Exploring your data
+		- Getting summary statistics
+		- Get data out of R as a CSV file
   
-## Outside Scope
-
-## Why use an RNotebook?
+## Aside: Why use an RNotebook?
 
 R Notebooks let you run R code and display the results interactively while also sharing the results as an html file that anyone can read. We will be using this R Notebook to display code and examples. All the commands seen in the following snippits can be run in Rstudio, the R console, or in a .R file
 
@@ -24,23 +21,32 @@ For example the following displays a simple scatterplot for the data in the buil
 plot(mtcars$mpg)
 ```
 
+# Notes before we get started
+- What Happens in R Stays In R (Until You Get It Out)
+- Put every project in it's own directory
+- Using RStudio "Projects" is a convient way to keep things together
 
-# What Happens in R Stays In R (Until You Get It Out)
+# Initial setup
 
-# Set up a new project in R
+## Set up a new project
 
-Using "File --> New Project" set up a new project in a new directory on your computer. This is where we will save our files and work (remember where this is so we can move data to it later). 
+Using "File --> New Project" set up a new project in a new directory on your computer. This is where we will save our work (remember where this is so we can move data to it later). 
 
-# Set your working directory to the directory you just created. 
+## Create a new R Script
 
-This can be done with the following code, or by using the RStudio toolbar with "Session --> Set Working Directory". This is somewhat easier if you don't know your directory structure.
+Open a new R Script file (File --> New File --> R Script) and save it in your working directory with a .R extention
+
+## Set your working directory to the directory you just created. 
+This lets R know where it should look for and save files
+
+This can be done by using the RStudio toolbar  (Session --> Set Working Directory). Copy and paste the line that appears in your console to your script so it's easy to run next time
 
 ```{r}
 setwd("~/projects/TeachingRIntro50Minutes")
 ```
 
 
-# Install any libraries you will need
+## Install any libraries you will need
 
 This only needs to be done once for each package for each install of R. This can take a lot of time if the package is large or has a lot of dependencies. In this case, let's start by installing the ggplot2 package. 
 
@@ -49,16 +55,22 @@ install.packages("ggplot2")
 ```
 
 
-# Load Libraries into memory. 
+## Load Libraries into memory. 
 This needs to be done each for each R session. 
 
 ```{r}
 library(ggplot2)
 ```
 
-# Load some data into R
+# Getting data into R
 
-In this case, we are just going to assign some data, both numbers and text, to a couple different names       . R has a lot of different data structures and types that you will learn as you explore R and as you need to do different things with R.
+There a number of different ways to get data into R. 
+
+## Manually assigning variables
+
+First, let's just assign some data, both numbers and text, to a couple different variables. 
+
+ASIDE: R has a lot of different data structures and types that you will learn as you explore R and as you need to do different things with R.
 
 ```{r}
 x <- 5
@@ -70,8 +82,8 @@ z
 ```
 
 
-# Built-in dataset that comes with R 
-R comes with a number or built-in datasets that you can explore.  
+## Built-in dataset that comes with R 
+R comes with a number or built-in datasets that are good for eploring R and R Studio. We can load them directly and also assign them to variable names.
 
 
 ```{r}
