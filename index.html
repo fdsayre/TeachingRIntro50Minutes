@@ -175,7 +175,7 @@ What is the difference between R & RStudio
 
 <section data-markdown>
 	<textarea data-template>
-## RStudio Interface
+      ## RStudio Interface
 
 	</textarea>
 </section>
@@ -183,56 +183,60 @@ What is the difference between R & RStudio
 <section data-markdown>
 	<textarea data-template>
 
-# Asigning Variables
-```
-x <- 5
-x
-y <- "Rstats"
-y
-z <- c("rstats", "perl", "bash", "python")
-z
-```
+        # Asigning Variables
+        ```{r}
+        x <- 5
+        x
+        y <- "Rstats"
+        y
+        z <- c("rstats", "perl", "bash", "python")
+        z
+        ```
 	</textarea>
 </section>
 
 <section data-markdown>
 	<textarea data-template>
 
-## Assigning built-in datasets to variables
-```r
-mtcars
-cardata <- mtcars
-cardata
-```
+      ## Assigning built-in datasets to variables
+      ```{r}
+      mtcars
+      cardata <- mtcars
+      cardata
+      ```
 
 	</textarea>
 </section>
 
 <section data-markdown>
 	<textarea data-template>
-
-```r
-energydata <- read.csv("mpls_energy_benchmarking_2015.csv", header=TRUE, na.strings=c("N/A", "Not Available", "NA", "0"))
-```
+	  ## Importing from CSV
+  
+      ```{r}
+      energydata <- read.csv("mpls_energy_benchmarking_2015.csv", header=TRUE, na.strings=c("N/A", "Not Available", "NA", "0"))
+      ```
 	</textarea>
 </section>
 
 <section data-markdown>
 	<textarea data-template>
-```{r}
-head(energydata)
-nrow(energydata)
-ncol(energydata)
-str(energydata)
-```
+	  ## Taking a look at our data
+    ```{r}
+    head(energydata)
+    nrow(energydata)
+    ncol(energydata)
+    str(energydata)
+    ```
 	</textarea>
 </section>
 
 <section data-markdown>
 	<textarea data-template>
-```
-summary(energydata)
-```
+    ## Getting summary stats
+    ```{r}
+    summary(energydata)
+    summary(energydata$energy_star_score)
+    ```
 	</textarea>
 </section>
 
