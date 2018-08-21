@@ -6,6 +6,7 @@ output: html_notebook
 This is a [R Notebook](http://rmarkdown.rstudio.com) for the "Introducton to R and R Studio" UMN Data Management Bootcamp workshop. Slides and data can be found [here](http://z.umn.edu/rtutorial). 
 
 # Objectives
+		- Exploring RStudio
 		- Setting up a new project
 		- Getting data into R as a CSV file
 		- Exploring your data & getting summary statistics
@@ -24,6 +25,11 @@ For example the following displays a simple scatterplot for the data in the buil
 plot(mtcars$mpg)
 ```
 
+
+# Exploring RStudio
+
+More information:
+- [Data Carpentry: Before We Start](http://datacarpentry.org/R-ecology-lesson/00-before-we-start.html) 
 
 ***
 
@@ -117,6 +123,9 @@ You can also download data directly from R, in this case from figshare:
 
 ```{r}
 download.file("https://ndownloader.figshare.com/files/2292169", "portal_data_joined.csv")
+
+surveys <- read.csv("portal_data_joined.csv")
+
 ```
 
 ***
