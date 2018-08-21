@@ -28,8 +28,16 @@ plot(mtcars$mpg)
 
 # Exploring RStudio
 
-More information:
+Things to point out:
+- File editing pane
+- Console/Terminal pane
+- Right panes (enviornment, information)
+- How to change settings (and themes)
+
+More information we are going to skip over:
 - [Data Carpentry: Before We Start](http://datacarpentry.org/R-ecology-lesson/00-before-we-start.html) 
+
+
 
 ***
 
