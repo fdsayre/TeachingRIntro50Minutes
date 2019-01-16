@@ -16,15 +16,7 @@
 # - running in console vs. in a file
 ###################
 
-# Get a copy of this code to follow along
-
-download.file("https://raw.githubusercontent.com/fdsayre/TeachingRIntro50Minutes/master/workingcode.R", "introcode.csv")
-
-# Setting up ---------------
-# set up a project 
-#
-# Use FILE --> New Project
-
+# Setting up
 # set up your working directory so R knows where to look for files. You can do this with the following command or by using the menu Session --> Set Working Directory
 
 setwd("~/projects/TeachingRIntro50Minutes")
@@ -33,19 +25,16 @@ setwd("~/projects/TeachingRIntro50Minutes")
 
 install.packages("ggplot")
 
-# then we need to load libraries. we need to do this once for every session. 
+# then we need to load libraries. we do this once for every session. 
 
 library(ggplot2)
 
 # getting help inside R for any of the above commands
 
-?install.packages()
-?library()
+?install.packages
 
 # Getting Data Into R ------------
-
-# assigning values/data to objects
-# basically everything in R is assigned to an object
+# assigning dato to variables
 
 x <- 5
 x
@@ -53,6 +42,9 @@ y <- "Rstats"
 y
 z <- c("rstats", "perl", "bash", "python")
 z
+
+
+
 
 # loading from a CSV file
 # this example data is from 
@@ -80,15 +72,13 @@ gap
 
 # Exploring Your Data ------------
 
-str() #see structure
-head() #see head
-tail() #see tail
-dim() #see dimensions 
-nrow(gap) #number of rows
-ncol(gap) #number of columns
-summary() #summary stats
-
-# subsetting data
+str()
+head()
+tail()
+dim()
+nrow(gap)
+ncol(gap)
+summary()
 
 gap[1,]
 gap[,1:2]
