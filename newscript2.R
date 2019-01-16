@@ -55,3 +55,11 @@ boxplot(data$energy_star_score ~ data$org_name)
 
 
 boxplot(data$energy_star_score ~ data$public_private)
+
+
+ggplot(cardata, aes(x=hp, y=mpg, color=gear)) +
+  geom_point()
+
+ggplot(gap, aes(y=lifeExp, x=gdpPercap, color=continent)) +
+  geom_point() +
+  scale_x_log10()

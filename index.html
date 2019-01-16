@@ -39,7 +39,7 @@
 ## Fixes for next time I do this (notes from last time)
 - Use gapminder data for ggplot examples and cut cars data (keep msp data as example of importing from CSV)
 - Maybe move some of the lecture stuff to the end, get into exciting things quickly
-- Rnotebook is too complicated  for this purpose and messes up people's expectation about results appearing in the console. Move all code and examples to the slides
+- Rnotebook is too complicated  for this purpose and messes up people's expectation about results appearing in the console. Move all code and examples to the slides!
 	</textarea>
 </section>
 
@@ -67,42 +67,64 @@
 		Download the [newest version of R](https://cran.r-project.org/mirrors.html)
 		
 		Download the [FREE Desktop version of R Studio](https://www.rstudio.com/products/rstudio/download/)
+		
+		[Rstudio Cloud](https://rstudio.cloud)
 	</textarea>
 </section>
 
 
 <section data-markdown>
 	<textarea data-template>
-		## Objectives for today
-		- Slides: Why use R?
-		- Slides: What is the difference between R & RStudio
-		- RStudio: Getting data into R as a CSV file
-		- RStudio: Exploring your data & getting summary statistics
-		- RStudio: Plotting Your Data
-		- RStudio: Get data out of R as a CSV file
+		## Objectives 
+		- Why use R?
+		- Using RStudio
+		- Getting data into R
+		- Exploring data & summary statistics
+		- Basic Plotting 
+		- Where to go next
 	</textarea>
 </section>
 
-<section data-background-image="AHG2uMD.gif">
 
-		<H1 style="color:white;">Real Objectives for Today</H1>
-		<ul>
-		  <li style="color:white;">R IS NOT HARD!</li>
-		  <li style="color:white;">R IS POWERFUL!</li>
-		  <li style="color:white;">R IS FUN!</li>
-		</ul>
-
+<section data-markdown>
+	<textarea data-template>
+		## We Will NOT be
+		- Learning comprehensively how to use R
+	</textarea>
 </section>
+
+<section data-markdown>
+	<textarea data-template>
+
+[R-ladies Twin Cities:](https://www.meetup.com/RLadiesTC/)
+[RStudio community forum:](https://community.rstudio.com/)
+[R for Data Science (book):](https://r4ds.had.co.nz/)
+[Stat 545 course in R:](http://stat545.com/)
+[what they forgot to teach you about R](https://whattheyforgot.org/)
+	</textarea>
+</section>
+
+
+
+<section data-markdown>
+	<textarea data-template>
+		## Other UMN Resources and Getting Help
+		- [LATIS Research Workshop Series](http://latis.umn.edu/services-and-programs/research-support/2016-research-workshop-series)
+		- [Programming and Pizza](https://dash.umn.edu/tag/programming-and-pizza/)
+		- Upcoming Software Carpentry Workshops
+	</textarea>
+</section>
+
 
 
 <section data-markdown>
 	<textarea data-template>
 		## Why use R?
-		- Do things programmatically that you couldn't do otherwise
+		- Do things programmatically that you can't otherwise
 		- Improved efficiency
 		- Less pointing and clicking & thus more reproducible
 		- Share your code
-		- It can be fun! 
+		- Fun! 
 	</textarea>
 </section>
 
@@ -150,14 +172,6 @@ What is the difference between R & RStudio
 
 <section data-markdown>
 	<textarea data-template>
-		## Other Tutorials
-		- [Datacamp - online tutorial](http://datacamp.com)
-		- [R for Data Science - book](http://r4ds.had.co.nz/)
-	</textarea>
-</section>
-
-<section data-markdown>
-	<textarea data-template>
 		## Other Resources and Getting Help
 		- [LATIS Research Workshop Series](http://latis.umn.edu/services-and-programs/research-support/2016-research-workshop-series)
 		- [Programming and Pizza](https://dash.umn.edu/tag/programming-and-pizza/)
@@ -177,66 +191,6 @@ What is the difference between R & RStudio
 	<textarea data-template>
       ## RStudio Interface
 
-	</textarea>
-</section>
-
-<section data-markdown>
-	<textarea data-template>
-
-        # Asigning Variables
-        ```{r}
-        x <- 5
-        x
-        y <- "Rstats"
-        y
-        z <- c("rstats", "perl", "bash", "python")
-        z
-        ```
-	</textarea>
-</section>
-
-<section data-markdown>
-	<textarea data-template>
-
-      ## Assigning built-in datasets to variables
-      ```{r}
-      mtcars
-      cardata <- mtcars
-      cardata
-      ```
-
-	</textarea>
-</section>
-
-<section data-markdown>
-	<textarea data-template>
-	  ## Importing from CSV
-  
-      ```{r}
-      energydata <- read.csv("mpls_energy_benchmarking_2015.csv", header=TRUE, na.strings=c("N/A", "Not Available", "NA", "0"))
-      ```
-	</textarea>
-</section>
-
-<section data-markdown>
-	<textarea data-template>
-	  ## Taking a look at our data
-    ```{r}
-    head(energydata)
-    nrow(energydata)
-    ncol(energydata)
-    str(energydata)
-    ```
-	</textarea>
-</section>
-
-<section data-markdown>
-	<textarea data-template>
-    ## Getting summary stats
-    ```{r}
-    summary(energydata)
-    summary(energydata$energy_star_score)
-    ```
 	</textarea>
 </section>
 
