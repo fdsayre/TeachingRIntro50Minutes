@@ -3,27 +3,37 @@
 # Teaching Intro to R in 70 Minutes
 ###############
 
-# Setup and exploring the interface ------------
-# Installing packages and setting a working directory and commenting 
-# https://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html
 
+################
+# Exploring the interface ------------
+# - Why I am using this document?
+# - Rstudio Interface
+#   - 4 panes
+#     - console
+#     - file editor
+#     - enviornment
+#     - file viewer
+# - running in console vs. in a file
+###################
+
+# Setting up
 # set up your working directory so R knows where to look for files. You can do this with the following command or by using the menu Session --> Set Working Directory
 
 setwd("~/projects/TeachingRIntro50Minutes")
 
 # we also need to install any packages we are going to use. You typically only need to do this once per package and in future sessions you won't need to do it. 
 
-install.packages("gapminder")
 install.packages("ggplot")
 
 # then we need to load libraries. we do this once for every session. 
+
 library(ggplot2)
-library(gapminder)
+
 # getting help inside R for any of the above commands
 
+?install.packages
 
 # Getting Data Into R ------------
-
 # assigning dato to variables
 
 x <- 5
@@ -39,12 +49,17 @@ z
 # loading from a CSV file
 # this example data is from 
 
+# get the csv file
 
-csv_data <- read.csv("mpls_energy_benchmarking_2015.csv")
+download.file("https://raw.githubusercontent.com/fdsayre/TeachingRIntro50Minutes/master/gapminder.csv", "data/gapminder.csv")
 
-csv_data <- read.csv("mpls_energy_benchmarking_2015.csv", header=TRUE)
+# load it into an object
 
-csv_data <- read.csv("mpls_energy_benchmarking_2015.csv", header=TRUE, na.strings=c("N/A", "Not Available", "NA", "0"))
+csv_data <- read.csv("data/gaptestdownload.csv")
+
+csv_data <- read.csv("data/gaptestdownload.csv", header=TRUE)
+
+csv_data <- read.csv("data/gaptestdownload.csv", header=TRUE, na.strings=c("N/A", "Not Available", "NA", "0"))
 
 # using built-in datasets 
 
