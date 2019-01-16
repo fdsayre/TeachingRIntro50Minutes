@@ -129,6 +129,52 @@ ggplot(csv_data, aes(y=lifeExp, x=gdpPercap, color=continent)) +
   geom_point() +
   scale_x_log10()
 
+# what else might we want to look at? What other variables are there?
+str(csv_data)
+
+geom_bar()
+geom_histogram()
+
+# DPLYR -----------
+# https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
+
+library(dplyr)
+
+# filter = choose rows based on criteria 
+
+filter(csv_data, lifeExp < 29)   
+filter(gapminder, country == "Canada")
+
+# select = choose columns 
+
+select(csv_data, year, lifeExp)
+
+
+# using pipes
+
+csv_data %>% head()
+
+# using pipes with dplyr
+
+csv_data %>%
+  select(year, lifeExp) %>%
+  head(4)
+
+csv_data %>%
+  filter(country == "Cambodia") %>%
+  select(year, lifeExp) 
+
+
+csv_data %>%
+  filter(country == "Cambodia") %>%
+  select(year, lifeExp) %>%
+  ggplot(., aes(x=year, y=lifeExp)) +
+    geom_point()
+
+# group by
+
+
+
 # Getting Data Out of R ------------
 
-write.csv(csv_data, file = "my_exported_data.csv")
+write.csv(csv_data, file = "my_exported_data.csv", row.names = FALSE)
