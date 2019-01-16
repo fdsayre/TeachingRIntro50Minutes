@@ -1,6 +1,6 @@
 # Code from: http://datacarpentry.org/R-ecology-lesson/02-starting-with-data.html 
 
-download.file("https://ndownloader.figshare.com/files/2292169", "data/portal_data_joined.csv")
+download.file("https://ndownloader.figshare.com/files/2292169", "../portal_data_joined.csv")
 
 surveys <- read.csv("portal_data_joined.csv")
 
