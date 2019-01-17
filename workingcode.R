@@ -18,7 +18,7 @@
 
 # Get a copy of this code to follow along
 
-download.file("https://raw.githubusercontent.com/fdsayre/TeachingRIntro50Minutes/master/workingcode.R", "introcode.csv")
+download.file("https://raw.githubusercontent.com/fdsayre/TeachingRIntro50Minutes/master/workingcode.R", "introcode.R")
 
 # console vs. text file
 
@@ -66,7 +66,7 @@ z
 
 # download the csv file into a *data* directory
 
-download.file("https://raw.githubusercontent.com/fdsayre/TeachingRIntro50Minutes/master/gapminder.csv", "data/gapminder.csv")
+download.file("https://raw.githubusercontent.com/fdsayre/TeachingRIntro50Minutes/master/data/gapminder.csv", "data/gapminder.csv")
 
 # load the data into an object called
 
