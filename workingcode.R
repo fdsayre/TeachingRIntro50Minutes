@@ -139,9 +139,10 @@ ggplot(csv_data, aes(y=lifeExp, x=gdpPercap, color=continent)) +
 
 # what else might we want to look at? What other variables are there?
 str(csv_data)
-
-geom_bar()
+eom_bar()
 geom_histogram()
+geom_smooth()
+
 
 # DPLYR -----------
 # https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
