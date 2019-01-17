@@ -20,6 +20,13 @@
 
 download.file("https://raw.githubusercontent.com/fdsayre/TeachingRIntro50Minutes/master/workingcode.R", "introcode.csv")
 
+# console vs. text file
+
+5 + 5
+3 * 5
+sqrt(100)
+
+
 # Setting up ---------------
 # set up a project 
 
@@ -101,7 +108,8 @@ seq(1, 10, by = 2)
 gap[seq(1, NROW(gap), by = 10),]
 
 
-# Plotting Data ------------
+# Plotting Data with ggplot ------------
+# https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf
 
 library(ggplot2)
 
