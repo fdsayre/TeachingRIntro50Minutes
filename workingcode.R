@@ -17,6 +17,7 @@
 ###################
 
 # console vs. text file
+# running commands from the text file
 
 5 + 5
 3 * 5
@@ -52,21 +53,24 @@ library(ggplot2)
 
 x <- 5
 x
+x * 5
+sqrt(x)
 y <- "Rstats"
 y
 z <- c("rstats", "perl", "bash", "python")
 z
 
-# loading from a CSV file
-# this example data is from 
 
-# download the csv file into a *data* directory
+# loading from a CSV file
+# this example data is from Gapminder
+
+# download the csv file
 
 download.file("https://raw.githubusercontent.com/fdsayre/TeachingRIntro50Minutes/master/data/gapminder.csv", "gapminder.csv")
 
 # load the data into an object called
 
-# just load in the CSV
+# just load in the CSV into an object called "csv_data"
 csv_data <- read.csv("gapminder.csv")
 
 # explicitely tell R the first row is column names
@@ -82,6 +86,7 @@ str() #see structure
 
 str(csv_data)
 
+# try with the following
 head() #see head
 tail() #see tail
 dim() #see dimensions 
@@ -92,16 +97,12 @@ summary() #summary stats
 # subsetting data
 
 csv_data[1,]
+csv_data[,1]
 csv_data[,1:2]
 
 csv_data[c(1, 2, 50, 100),]
 
 # Plotting Data with built in plotting functions and ggplot ------------
-# https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf
-
-(ggplot2)
-
-
 
 # built in plotting
 
@@ -112,6 +113,8 @@ boxplot(csv_data$lifeExp ~ csv_data$continent)
 plot(csv_data$lifeExp ~ csv_data$gdpPercap)
 
 # ggplot
+# https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf
+
 library(ggplot2)
 
 ggplot(csv_data, aes(y=lifeExp, x=gdpPercap)) +
