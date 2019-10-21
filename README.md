@@ -1,6 +1,8 @@
 # TeachingRIntro50Minutes
 
-This ia an RNotebook meant to be used to teach an intro to R course in 50 minutes
+This is an RNotebook meant to be used to teach an intro to R course in 50 minutes
+
+---
 
 Objectives
 - Learn how R can be used to improve the rigor and reproducibility of your research
